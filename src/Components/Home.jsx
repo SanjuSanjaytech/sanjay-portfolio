@@ -2,6 +2,26 @@ import React from 'react'
 import { FaLinkedin, FaGithub } from "react-icons/fa";  
 
 const Home = () => {
+
+    const handleDownload = () => {
+        fetch("/SanjayResume.pdf")
+            .then(response => response.blob())
+            .then(blob => {
+                const url = window.URL.createObjectURL(blob);
+                const link = document.createElement("a");
+                link.href = url;
+                link.setAttribute("download", "SanjayResume.pdf"); // Forces download
+                document.body.appendChild(link);
+                link.click();
+                document.body.removeChild(link);
+                window.URL.revokeObjectURL(url);
+            })
+            .catch(error => console.error("Download failed:", error));
+    };
+    
+    
+    
+    
   return (
     <section id='home' className='min-h-screen flex items-center justify-center relative'>
         <div className='text-center z-10 px-4'>
@@ -36,12 +56,15 @@ const Home = () => {
             </div>
 
             <div className='flex justify-center space-x-4'>
-                <a href="/SanjayResume.pdf" download="SanjayResume.pdf" className='bg-blue-500 text-white py-3 px-8 rounded font-medium transition relative overflow-hidden hover:translate-y-0.5 hover:shadoe-[0_0_15px_rgba(59, 130, 246, 0.4]) flex items-center justify-center'>
-                    Resume
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-6 h-6">
-                         <path stroke-linecap="round" stroke-linejoin="round" d="M12 4v12m0 0l-4-4m4 4l4-4m-7 6h10"/>
-                    </svg>
-                </a>
+            <a 
+                onClick={handleDownload} 
+                className='bg-blue-500 text-white py-3 px-8 rounded font-medium cursor-pointer transition relative overflow-hidden hover:translate-y-0.5 hover:shadow-[0_0_15px_rgba(59, 130, 246, 0.4)] flex items-center justify-center'
+                >
+                Resume
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="2" stroke="currentColor" className="w-6 h-6">
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M12 4v12m0 0l-4-4m4 4l4-4m-7 6h10"/>
+                </svg>
+            </a>
                 <a href="#contact" className='border border-blue-500/50 text-blue py-3 px-6 rounded fonr-medium transition-all duration-200 hover:translate-y-0.5 hover:shadow-[0_0_15px_rgba(59, 130, 246, 0.4]) hover:bg-blue-500/10'>
                     Connect with me
                 </a>
