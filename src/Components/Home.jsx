@@ -1,26 +1,8 @@
 import React from 'react'
-import { FaLinkedin, FaGithub } from "react-icons/fa";  
+import { FaLinkedin, FaGithub } from "react-icons/fa";
+import resume from '../assets/resume.pdf'
 
 const Home = () => {
-
-    const handleDownload = () => {
-        fetch("/SanjayResume.pdf")
-            .then(response => response.blob())
-            .then(blob => {
-                const url = window.URL.createObjectURL(blob);
-                const link = document.createElement("a");
-                link.href = url;
-                link.setAttribute("download", "SanjayResume.pdf"); // Forces download
-                document.body.appendChild(link);
-                link.click();
-                document.body.removeChild(link);
-                window.URL.revokeObjectURL(url);
-            })
-            .catch(error => console.error("Download failed:", error));
-    };
-    
-    
-    
     
   return (
     <section id='home' className='min-h-screen flex items-center justify-center relative'>
@@ -57,7 +39,8 @@ const Home = () => {
 
             <div className='flex justify-center space-x-4'>
             <a 
-                onClick={handleDownload} 
+                href={resume}
+                download={resume}
                 className='bg-blue-500 text-white py-3 px-8 rounded font-medium cursor-pointer transition relative overflow-hidden hover:translate-y-0.5 hover:shadow-[0_0_15px_rgba(59, 130, 246, 0.4)] flex items-center justify-center'
                 >
                 Resume
