@@ -10,9 +10,8 @@ const frontendSkills = [
 ]
 const backendSkills = [
     "NodeJS", 
-    "Python", 
+    "ExpressJS", 
     "MangoDB",
-    "GraphQL",
 ]
 
 
