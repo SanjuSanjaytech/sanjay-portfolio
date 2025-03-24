@@ -1,6 +1,6 @@
 import React from 'react'
 import { FaLinkedin, FaGithub } from "react-icons/fa";
-import resume from '../assets/resume.pdf'
+import Sanjay_Resume from '../assets/Sanjay_Bangaru_Resume.pdf'
 
 const Home = () => {
     
@@ -39,8 +39,8 @@ const Home = () => {
 
             <div className='flex justify-center space-x-4'>
             <a 
-                href={resume}
-                download='resume'
+                href={Sanjay_Resume}
+                download='Sanjay_Bangaru_Resume'
                 className='bg-blue-500 text-white py-3 px-8 rounded font-medium cursor-pointer transition relative overflow-hidden hover:translate-y-0.5 hover:shadow-[0_0_15px_rgba(59, 130, 246, 0.4)] flex items-center justify-center'
                 >
                 Resume
