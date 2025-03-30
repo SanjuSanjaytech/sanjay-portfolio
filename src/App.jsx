@@ -8,6 +8,7 @@ import About from './Components/About'
 import Projects from './Components/Projects'
 import Contact from './Components/Contact'
 import Copyrights from './Components/Copyrights'
+import Certificates from './Components/Certificates'
 
 const App = () => {
 
@@ -23,10 +24,10 @@ const App = () => {
 
       <div className={`min-h-screen transition-opacity duration-700 ${isLoaded ? "opacity-100" : "opacity-0"} text-gray-100`}>
         <Navbar menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
-        <MobileMenu menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
         <Home />
         <About />
         <Projects />
+        <Certificates/>
         <Contact />
         <Copyrights />
       </div>

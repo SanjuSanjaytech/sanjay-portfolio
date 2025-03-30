@@ -12,40 +12,38 @@ html, body {
 }
 
 
-@layer utilities {
-    
-    @keyframes blink {
-        0%, 100% {
-            opacity: 1;
-        }
-        50% {
-            opacity: 0;
-        }
-    }
 
-    .animate-blink {
-        animation: blink 0.8s step-end infinite; 
+
+@layer utilities {
+    @keyframes blink {
+      0%, 100% {
+        opacity: 1;
+      }
+      50% {
+        opacity: 0;
+      }
     }
-    
-    
-    
-    
-    
+  
+    .animate-blink {
+      animation: blink 0.6s step-end infinite;
+    }
+  
     @keyframes loading {
         0% {
-            transform: translateX(-100%);
-        }
-        100% {
-            transform: translateX(250%);
-        }
+            width: 0%; /* Start at 0% width */
+          }
+          100% {
+            width: 100%; /* End at 100% width */
+          }
     }
-
+  
     .animate-loading-bar {
-        animation: loading 0.8s ease infinite; 
+      animation: loading 1.2s ease-in-out ease-out forwards;
     }
 
 
-
-}
-
+    .animate-spin-slow {
+      animation: spin 4s linear infinite;
+    }
+  }
   
