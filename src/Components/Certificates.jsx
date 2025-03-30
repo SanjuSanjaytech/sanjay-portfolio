@@ -9,7 +9,7 @@ const Certificates = () => {
 
   const certificates = [
     {
-      title: "Introduction to Cybersecurity",
+      title: "Cybersecurity & Ethical Hacking",
       issuer: "RineX.Ai",
       date: "March 2024",
       imageUrl: certificateCyber,
