@@ -23,7 +23,7 @@ const Navbar = ({ menuOpen, setMenuOpen }) => {
     <nav
       className={`fixed top-0 w-full z-50 transition-all duration-300 ${
         scrolled
-          ? 'bg-[rgba(15,15,15,0.7)] backdrop-blur-md shadow-md border-b'
+          ? 'bg-[rgba(15,15,15,0.7)] backdrop-blur-md shadow-md'
           : 'bg-transparent'
       }`}
     >
