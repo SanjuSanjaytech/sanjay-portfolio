@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 export const LoadingScreen = ({ onComplete }) => {
   const [text, setText] = useState("");
   const [isComplete, setIsComplete] = useState(false); // Track when typing finishes
-  const fullText = "< Ready />";
+  const fullText = "< Welcome />";
 
   useEffect(() => {
     let index = 0;
