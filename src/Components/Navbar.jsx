@@ -5,7 +5,6 @@ import MobileMenu from './MobileMenu';
 const Navbar = ({ menuOpen, setMenuOpen }) => {
   const [scrolled, setScrolled] = useState(false);
 
-
   useEffect(() => {
     const handleScroll = () => {
       setScrolled(window.scrollY > 10);
