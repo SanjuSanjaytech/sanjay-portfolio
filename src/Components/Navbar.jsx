@@ -60,7 +60,7 @@ const Navbar = ({ menuOpen, setMenuOpen }) => {
 
         {/* Desktop Navigation */}
         <div className="hidden md:flex items-center space-x-10">
-          {['Home', 'About', 'Project', 'Certificates', 'Contact'].map((item) => (
+          {['Home', 'About', 'Projects', 'Certificates', 'Contact'].map((item) => (
             <a
               key={item}
               href={`#${item.toLowerCase()}`}

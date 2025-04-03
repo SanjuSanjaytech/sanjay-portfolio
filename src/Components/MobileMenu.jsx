@@ -14,7 +14,7 @@ const MobileMenu = ({ menuOpen, setMenuOpen }) => {
       transition={{ duration: 0.4, ease: 'easeInOut' }}
       className="fixed top-0 left-0 w-full h-screen bg-black/90 text-white flex flex-col items-center justify-center space-y-8 text-xl z-40"
     >
-      {['Home', 'About', 'Project', 'Certificates', 'Contact'].map((item) => (
+      {['Home', 'About', 'Projects', 'Certificates', 'Contact'].map((item) => (
         <a
           key={item}
           href={`#${item.toLowerCase()}`}
