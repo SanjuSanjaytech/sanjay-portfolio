@@ -1,7 +1,7 @@
     import React, { useState } from "react";
     import emailjs from "emailjs-com";
     import { SendHorizontal, CheckCircle } from "lucide-react";
-    import { motion } from "framer-motion";
+    import { motion } from "framer-motion"; 
 
     const Contact = () => {
     const [formData, setFormData] = useState({

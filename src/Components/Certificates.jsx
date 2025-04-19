@@ -3,6 +3,16 @@ import { Dialog } from "@headlessui/react";
 import { motion } from "framer-motion";
 import certificateCyber from "../assets/Certificate-Cyber.jpg";
 
+const fadeInUp = {
+  hidden: { opacity: 0, y: 40 },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" } },
+};
+
+const cardVariants = {
+  hidden: { opacity: 0, scale: 0.8 },
+  visible: { opacity: 1, scale: 1, transition: { duration: 0.5, ease: "easeOut" } },
+};
+
 const Certificates = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [selectedCert, setSelectedCert] = useState(null);
@@ -30,21 +40,27 @@ const Certificates = () => {
 
   return (
     <section className="py-20 px-4 md:px-20" id="certificates">
-      <h2 className="text-3xl font-bold mb-12 bg-gradient-to-r from-blue-500 to-green-400 bg-clip-text text-transparent text-center">
+      <motion.h2
+        variants={fadeInUp}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: false, amount: 0.3 }}
+        className="text-3xl font-bold mb-12 bg-gradient-to-r from-blue-500 to-green-400 bg-clip-text text-transparent text-center"
+      >
         Certificates
-      </h2>
+      </motion.h2>
 
       <div className="flex justify-center items-center">
         {certificates.map((cert, index) => (
           <motion.div
             key={index}
-            initial={{ opacity: 0, y: 50 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            variants={cardVariants}
+            initial="hidden"
+            whileInView="visible"
             viewport={{ once: false, amount: 0.3 }}
-            transition={{
-              duration: 0.6,
-              ease: "easeInOut",
-              delay: index * 0.2,
+            whileHover={{
+              scale: 1.05,
+              boxShadow: "0 8px 24px rgba(34,197,94,0.3)",
             }}
             className="rounded-2xl shadow-md border hover:shadow-xl transition-all duration-300 w-full max-w-sm"
           >
