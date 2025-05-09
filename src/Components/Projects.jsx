@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 import image from "../assets/sign.webp";
 import mernAuthImg from "../assets/mern.webp";
 import reqres from "../assets/reqres.png";
+import task from '../assets/task.png'
 import {
   FaReact,
   FaHtml5,
@@ -57,6 +58,21 @@ const projects = [
     repoLink: "https://github.com/SanjuSanjaytech/MERN-Authentication",
   },
   {
+    title: "Task Manager",
+    image: task,
+    description:
+      "A full-stack Task Management System built with the MERN stack and Next.js. Features include user authentication, task creation, assignment, and status tracking. JWT and bcrypt are used for secure login, with the frontend deployed on Vercel and the backend on Render.",
+    techStack: [
+      { name: "MongoDB", icon: <SiMongodb className="text-3xl text-green-600" /> },
+      { name: "Express", icon: <SiExpress className="text-3xl text-gray-300" /> },
+      { name: "Next.js", icon: <FaReact className="text-3xl text-black" /> },
+      { name: "Node.js", icon: <FaNodeJs className="text-3xl text-green-500" /> },
+      { name: "Tailwind CSS", icon: <SiTailwindcss className="text-3xl text-teal-400" /> },
+    ],
+    liveLink: "https://task-management-system-wpgn.vercel.app/login",
+    repoLink: "https://github.com/SanjuSanjaytech/Task-Management-System",
+  },
+  {
     title: "User Management",
     image: reqres,
     description:
@@ -68,6 +84,9 @@ const projects = [
     ],
     repoLink: "https://github.com/SanjuSanjaytech/req-Auth",
   },
+  
+  
+  
 ];
 
 const Projects = () => {
