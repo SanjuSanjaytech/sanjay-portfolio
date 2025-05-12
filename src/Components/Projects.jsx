@@ -69,7 +69,7 @@ const projects = [
       { name: "Node.js", icon: <FaNodeJs className="text-3xl text-green-500" /> },
       { name: "Tailwind CSS", icon: <SiTailwindcss className="text-3xl text-teal-400" /> },
     ],
-    liveLink: "https://task-management-system-wpgn.vercel.app/login",
+    liveLink: "https://task-management-system-puce-psi.vercel.app/intro",
     repoLink: "https://github.com/SanjuSanjaytech/Task-Management-System",
   },
   {
