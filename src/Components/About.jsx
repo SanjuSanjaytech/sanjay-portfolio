@@ -28,7 +28,6 @@ const About = () => {
   const skillsData = {
     frontend: [
       { name: "React", icon: <FaReact />, level: 90, color: "#61DAFB" },
-      { name: "TypeScript", icon: <SiTypescript />, level: 80, color: "#3178C6" },
       { name: "JavaScript", icon: <SiJavascript />, level: 85, color: "#F7DF1E" },
       { name: "HTML5", icon: <FaHtml5 />, level: 95, color: "#E34F26" },
       { name: "CSS3", icon: <FaCss3Alt />, level: 90, color: "#1572B6" },
@@ -328,8 +327,7 @@ const About = () => {
 const getSkillDescription = (skillName) => {
   const descriptions = {
     React: "Built multiple SPA applications with React hooks and context API",
-    TypeScript: "Used TypeScript in production apps for type safety",
-    JavaScript: "5+ years experience with modern ES6+ JavaScript",
+    JavaScript: "Skilled in  modern ES6+ JavaScript",
     HTML5: "Semantic HTML5 markup with accessibility best practices",
     CSS3: "Advanced CSS animations and responsive design",
     Tailwind: "Primary CSS framework for rapid UI development",
